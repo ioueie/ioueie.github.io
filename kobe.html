@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kobe</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <style>
+    body.index-background {
+      position: relative;
+      background: url('pics/kobe2.tiff') no-repeat right center fixed;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    body.index-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1;  
+      }
+      
+      body.index-background > * {
+        position: relative;
+        z-index: 2; 
+      }
+      .content-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 2rem;
+        justify-content: flex-end;
+      }
+      .text-content {
+        max-width: 50%;
+        margin-left: auto;
+        font-family: 'Open Sans', sans-serif;
+        text-align: right;
+      }
+      .text-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .text-content .stats {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      .text-content .stats ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .text-content .stats ul li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="index-background">
+    <nav>
+      <div class="nav">
+        <div class="nav-left">
+          <a class="active" href="index.html"><img src="pics/logo.png" alt="Team Logo" /></a>
+          <a href="#home">Home</a>
+          <a href="news.html">News</a>
+          <a href="playerinfo.html">Player Info</a>
+          <a href="#teamschedule">Team Schedule</a>
+          <a href="teamlegacy.html">Team Legacy</a>
+        </div>
+        <div class="nav-right">
+          <a href="#signin">Sign In</a>
+        </div>
+      </div>
+    </nav>
+    <div class="content-container">
+      <div class="text-content">
+        <h2>Kobe Brown</h2>
+        <p>Kobe Brown, a versatile power forward, is known for his robust presence in the paint and his ability to stretch the floor with a reliable mid-range and three-point shot. Brown's physicality and basketball IQ make him a key player in both offensive and defensive plays, providing a strong presence under the basket and on the perimeter.</p>
+        <p>Throughout his career, Brown has demonstrated consistent improvement, showcasing his skills in rebounding, shot-blocking, and scoring. His work ethic and leadership on the court have made him a valuable asset to his team, contributing significantly in clutch moments.</p>
+        <div class="stats">
+          <h3>Career Stats:</h3>
+          <ul>
+            <li>Points per game: 14.2</li>
+            <li>Rebounds per game: 7.8</li>
+            <li>Assists per game: 2.1</li>
+            <li>Blocks per game: 1.2</li>
+            <li>Field Goal Percentage: 48.5%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>

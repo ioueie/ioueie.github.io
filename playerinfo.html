@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Player Info</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Open+Sans:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <style>
+
+    .slider-wrapper {
+      width: 100%;
+      margin-top: -50px;
+      height: 100vh;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .slide {
+      flex: 0 0 100%;
+      height: 100%;
+      scroll-snap-align: start;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      grid-column: 1 / -1;
+      grid-row: 1 / -1;
+      z-index: -1;
+    }
+
+    .caption {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+      z-index: 1;
+    }
+
+    .primary-caption {
+      font-size: 3rem;
+      font-family: "Bebas Neue", sans-serif;
+      margin-bottom: 1rem;
+    }
+
+    .secondary-caption {
+      font-size: 1.5rem;
+      max-width: 600px;
+      font-family: "Open Sans", sans-serif;
+      padding: 0px 20px 20px; 
+    }
+
+    .slider-nav {
+      position: absolute;
+      bottom: 1rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      z-index: 10;
+    }
+
+    .slider-nav a {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 255, 0.5);
+      display: inline-block;
+      cursor: pointer;
+    }
+
+    .slider-nav a.active,
+    .slider-nav a:hover {
+      background-color: white;
+    }
+
+    .slide-1 .caption { grid-area: 1 / 1; justify-self: start; align-self: start; padding-top: 80px; padding-right: 60%; } 
+    .slide-2 .caption { grid-area: 2 / 2; justify-self: center; align-self: center; } 
+    .slide-3 .caption { grid-area: 1 / 2; justify-self: end; align-self: start; padding-top: 80px;} 
+    .slide-4 .caption { grid-area: 1 / 2; justify-self: center; align-self: center; } 
+    .slide-5 .caption { grid-area: 2 / 1; justify-self: start; align-self: center; padding-right: 60%; padding-bottom: 80px;} 
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav">
+      <div class="nav-left">
+        <a href="index.html"><img src="pics/logo.png" alt="Celtics Logo"></a>
+        <a href="index.html">Home</a>
+        <a href="news.html">News</a>
+        <a class="active" href="playerinfo.html">Player Info</a>
+        <a href="#teamschedule">Team Schedule</a>
+        <a href="teamlegacy.html">Team Legacy</a>
+      </div>
+      <div class="nav-right">
+        <a class="sign-in" href="#signin">Sign In</a>
+      </div>
+    </div>
+  </nav>       
+  <section class="slider-wrapper">
+    <div class="slider">
+      <a href="kawhi.html" class="slide slide-1" id="slide-1">
+        <img src="pics/kawhi.jpeg" alt="SF Kawhi Leonard">
+        <div class="caption">
+          <div class="primary-caption">SF Kawhi Leonard</div>
+          <div class="secondary-caption">Kawhi Leonard, a two-time NBA Champion known for his exceptional defensive skills and clutch performances.</div>
+        </div>
+      </a>
+      <a href="westbrook.html" class="slide slide-2" id="slide-2">
+        <img src="pics/westbrook.jpeg" alt="PG Russell Westbrook">
+        <div class="caption">
+          <div class="primary-caption">PG Russell Westbrook</div>
+          <div class="secondary-caption">Russell Westbrook, the 2016 MVP, renowned for his explosive athleticism and triple-double performances.</div>
+        </div>
+      </a>
+      <a href="james.html" class="slide slide-3" id="slide-3">
+        <img src="pics/james.webp" alt="SG James Harden">
+        <div class="caption">
+          <div class="primary-caption">SG James Harden</div>
+          <div class="secondary-caption">James Harden, a four-time NBA Champion, famous for his scoring ability and step-back three-pointers.</div>
+        </div>
+      </a>
+      <a href="kobe.html" class="slide slide-4" id="slide-4">
+        <img src="pics/kobe.avif" alt="PF Kobe Brown">
+        <div class="caption">
+          <div class="primary-caption">PF Kobe Brown</div>
+          <div class="secondary-caption">Kobe Brown, a rising star, known for his versatility and strength in the paint.</div>
+        </div>
+      </a>
+      <a href="zubac.html" class="slide slide-5" id="slide-5">
+        <img src="pics/zubac.webp" alt="C Ivica Zubac">
+        <div class="caption">
+          <div class="primary-caption">C Ivica Zubac</div>
+          <div class="secondary-caption">Ivica Zubac, a dominant center, acclaimed for his defensive prowess and rebounding skills.</div>
+        </div>
+      </div>
+    </a>
+    <div class="slider-nav">
+      <a href="#slide-1"></a>
+      <a href="#slide-2"></a>
+      <a href="#slide-3"></a>
+      <a href="#slide-4"></a>
+      <a href="#slide-5"></a>
+    </div>
+  </section>
+  <script>
+    const slider = document.querySelector('.slider');
+    const slides = document.querySelectorAll('.slide');
+    const navDots = document.querySelectorAll('.slider-nav a');
+    let currentIndex = 0;
+
+    function showSlide(index) {
+      if (index < 0) index = slides.length - 1;
+      if (index >= slides.length) index = 0;
+      slider.style.transform = `translateX(-${index * 100}%)`;
+      navDots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === index);
+      });
+      currentIndex = index;
+    }
+    navDots.forEach((nav, index) => {
+      nav.addEventListener('click', (event) => {
+        event.preventDefault();
+        showSlide(index);
+      });
+    });
+
+    function zoomAndNavigate() {
+      const img = document.querySelector('.slide-1 img');
+      img.classList.add('zoom');
+      setTimeout(() => {
+        window.location.href = "kawhi.html";
+      }, 2000); 
+    }
+
+    showSlide(0);
+  </script>
+</body>
+</html>

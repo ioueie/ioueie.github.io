@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/styles.css" />
+  <style>
+    body.index-background {
+      position: relative;
+      background: url('pics/james2.tiff') no-repeat right center fixed;
+      background-size: cover;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    body.index-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); 
+        z-index: 1; 
+      }
+      
+      body.index-background > * {
+        position: relative;
+        z-index: 2;
+      }
+      .content-container {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        padding: 0 2rem;
+        justify-content: flex-end;
+      }
+      .text-content {
+        max-width: 50%;
+        margin-left: auto;
+        font-family: 'Open Sans', sans-serif;
+        text-align: right;
+      }
+      .text-content h2 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+      .text-content p {
+        font-size: 1.2rem;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+      }
+      .text-content .stats {
+        font-size: 1.1rem;
+        line-height: 1.5;
+      }
+      .text-content .stats ul {
+        list-style: none;
+        padding-left: 0;
+      }
+      .text-content .stats ul li {
+        margin-bottom: 0.5rem;
+      }
+    </style>
+  </head>
+  <body class="index-background">
+    <nav>
+      <div class="nav">
+        <div class="nav-left">
+          <a class="active" href="index.html"><img src="pics/logo.png" alt="Celtics Logo" /></a>
+          <a href="#home">Home</a>
+          <a href="news.html">News</a>
+          <a href="playerinfo.html">Player Info</a>
+          <a href="#teamschedule">Team Schedule</a>
+          <a href="teamlegacy.html">Team Legacy</a>
+        </div>
+        <div class="nav-right">
+          <a href="#signin">Sign In</a>
+        </div>
+      </div>
+    </nav>
+    <div class="content-container">
+      <div class="text-content">
+        <h2>James Harden</h2>
+        <p>James Harden, one of the most prolific scorers in the NBA, is renowned for his exceptional offensive skills, particularly his step-back three-pointers and ability to draw fouls. As a former MVP, Harden has consistently been at the top of the league in scoring and assists, showcasing his versatility as a playmaker and scorer.</p>
+        <p>Throughout his career, Harden has been a key player for every team he has played for, earning numerous accolades, including multiple All-Star selections and scoring titles. His unique playing style and basketball IQ have made him a challenging matchup for defenders and a leader on and off the court.</p>
+        <div class="stats">
+          <h3>Career Stats:</h3>
+          <ul>
+            <li>Points per game: 25.0</li>
+            <li>Rebounds per game: 5.5</li>
+            <li>Assists per game: 6.8</li>
+            <li>Steals per game: 1.5</li>
+            <li>Three-point shooting percentage: 36.2%</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </body>
+  </html>
